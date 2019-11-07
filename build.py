@@ -7,7 +7,7 @@ bottom = open('template/bottom.html').read()
 index = top + index + bottom
 blog = top + blog + bottom
 projects = top + projects + bottom
-open('index.html', 'w+').write(art)
-open('projects.html', 'w+').write(blog)
-open('blog.html', 'w+').write(index)
+open('index.html', 'w+').write(index)
+open('projects.html', 'w+').write(projects)
+open('blog.html', 'w+').write(blog)
 
