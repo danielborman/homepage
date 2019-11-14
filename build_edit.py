@@ -1,17 +1,33 @@
 def main():
-    top = open('templates/top.html').read()
-    index = open('content/index.html').read()
-    projects = open('content/projects.html').read()
-    blog = open('content/blog.html').read()
-    bottom = open('templates/bottom.html').read()
+    base = open("templates/base.html").read()
+    
+pages = [
+    {
+        "filename": "content/index.html",
+        "output": "docs/index.html",
+        "title": "About Me",
+    },
+    {
+        "filename": "content/projects.html",
+        "output": "docs/projects.html",
+        "title": "My Projects",
+    },
+    {
+        "filename": "content/blog.html",
+        "output": "docs/blog.html",
+        "title": "My programming blog",
+    },
+]
+
+
+if __name__  == "__main__":
+    main()
+    
+for page in pages:
+    print(page)
 
 
 
 
-index = top + index + bottom
-blog = top + blog + bottom
-projects = top + projects + bottom
-open('index.html', 'w+').write(index)
-open('projects.html', 'w+').write(projects)
-open('blog.html', 'w+').write(blog)
+
 
